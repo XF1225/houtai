@@ -1,0 +1,20 @@
+{{include 'admin/common/header.html'}}
+      <div class="content">
+        {{include 'admin/common/left-add.html'}}
+        <section class="section" id="section">
+          <div class="dhgl-add-content" id="tjdh">
+            <h3>修改导航信息</h3>
+            <form class="contents" action="{{host}}/admin/user/dhedit" method="post">
+              <div>
+                <li><input type="hidden" name="id" value="{{@list._id}}" class="text"></li>
+                <li><p>导航标题：</p><input type="text" name="title" value="{{list.title}}" class="text"></li>
+                <li><p>链接地址：</p><input type="text" name="url" value="{{list.title}}" class="text"><span title="如果填写则跳转到外部地址（选填）">*</span></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+</body>
+</html>

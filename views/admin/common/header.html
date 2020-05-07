@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{host}}/admin/css/shouye.css">
+  <script src="{{host}}/admin/js/jquery-3.4.1.min.js"></script>
+  <script src="{{host}}/admin/js/list.js"></script>
+</head>
+<script>
+  $(document).ready(function(){
+    list();
+  })
+</script>
+<body>
+    <header>
+      <div class="headertop">
+        <h2 class="headerh2">XX后台管理系统</h2>
+        <div class="guanlirenyuan">
+        <div class="glry1"><img src="{{host}}/admin/imgs/qfdg.jpg"></div>
+        <div class="glry2"><p>欢迎光临,</p><span>{{userInfo}}</span></div>
+        <div class="glry3">❣</div>
+        </div>
+      </div>
+      <div class="tcdl">
+        <li><a href="javascript:;">设置</a></li>
+        <li><a href="javascript:;">个人资料</a></li>
+        <li><a href="{{host}}/admin/loginout">退出登录</a></li>
+      </div>
+      <div class="headerbottom">
+        <div class="hb1">系统分类</div>
+        <div class="hb2">
+            <div class="hb2-logo">🏚</div>
+            <div class="hb2-nav"><a class="active" href="{{host}}/admin">首页</a>><a>控制台</a></div>
+            <input type="search" class="hb2-search" placeholder="search...">
+        </div>
+      </div>
+    </header>

@@ -1,0 +1,21 @@
+{{include 'admin/common/header.html'}}
+      <div class="content">
+        {{include 'admin/common/left-add.html'}}
+        <section class="section" id="section">
+          <div class="gly-add-content" id="tjgly">
+            <h3>修改管理员信息</h3>
+            <form class="contents" action="{{host}}/admin/user/glyedit" method="post">
+              <div>
+                <li><input type="hidden" name="id" value="{{@list._id}}" class="text"></li>
+                <li><p>用户名：</p><input type="text" name="username" value="{{list.username}}" class="text"></li>
+                <li><p>绑定邮箱：</p><input type="email" name="email" value="{{list.email}}" class="text"></li>
+                <li><p>密码：</p><input type="password" name="password" value="{{list.password}}" class="password"></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+</body>
+</html>

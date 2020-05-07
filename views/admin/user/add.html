@@ -1,0 +1,93 @@
+{{include 'admin/common/header.html'}}
+      <div class="content">
+        {{include 'admin/common/left-add.html'}}
+        <section class="section" id="section">
+          <div class="gly-add-content" id="tjgly">
+            <h3>添加管理员</h3>
+            <form class="contents" action="{{host}}/admin/user/glyadd" method="post">
+              <div>
+                <li><p>用户名：</p><input type="text" name="username" class="text"></li>
+                <li><p>绑定邮箱：</p><input type="email" name="email" class="text"></li>
+                <li><p>密码：</p><input type="password" name="password" class="password"></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+          <div class="flgl-add-content" id="tjfl" style="display: none;">
+            <h3>添加文章分类</h3>
+            <form class="contents" action="{{host}}/admin/user/fladd" method="post">
+              <div>
+                <li><p>标题：</p><input type="text" name="title" class="text"></li>
+                <li><p>描述：</p><input type="text" name="description" class="text"></li>
+                <li><p>分类：</p><input type="text" name="cid" class="text"></li>
+                <li><p>关键词：</p><input type="text" name="keywords" class="text"></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+          <div class="nrgl-add-content" id="tjnr" style="display: none;">
+            <h3>添加文章内容</h3>
+            <form class="contents" action="{{host}}/admin/user/nradd" method="post">
+              <div>
+                <li><p>标题名称：</p><input type="text" name="title" class="text"></li>
+                <li><p>链接地址：</p><input type="text" name="url" class="text"><span title="如果填写则跳转到外部地址（选填）">*</span></li>
+                <li><p>所属分类：</p><input type="text" name="cid"></li>
+                <li><p>关键词：</p><input type="text" name="keywords" class="text"></li>
+                <li><p>图片：</p><input type="image" name="img" class="imgs" value="选择图片""><span>未选择任何文件</span></li>
+                <li><p>作者：</p><input type="text" name="author" class="text"></li>
+                <li><p>详细内容：</p><textarea name="content"></textarea></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+          <div class="lbtgl-add-content" id="tjlbt" style="display: none;">
+            <h3>添加轮播图</h3>
+            <form class="contents" action="{{host}}/admin/user/lbtadd" method="post">
+              <div>
+                <li><p>标题内容：</p><input type="text" name="title" class="text"></li>
+                <li><p>图片：</p><input type="image" class="img" name="imgs" value="选择图片""><span>未选择任何文件</span></li>
+                <li><p>链接地址：</p><input type="text" name="url" class="text"><span title="如果填写则跳转到外部地址（选填）">*</span></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+          <div class="yqljgl-add-content" id="tjyqlj" style="display: none;">
+            <h3>添加友情链接</h3>
+            <form class="contents" action="{{host}}/admin/user/yqljadd" method="post">
+              <div>
+                <li><p>友情链接标题：</p><input type="text" name="title" class="text"></li>
+                <li><p>图片：</p><input type="image" class="img" name="imgs" value="选择图片""><span>未选择任何文件</span></li>
+                <li><p>链接地址：</p><input type="text" name="url" class="text"><span title="如果填写则跳转到外部地址（选填）">*</span></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+          <div class="dhgl-add-content" id="tjdh" style="display: none;">
+            <h3>添加导航</h3>
+            <form class="contents" action="{{host}}/admin/user/dhadd" method="post">
+              <div>
+                <li><p>导航标题：</p><input type="text" name="title" class="text"></li>
+                <li><p>链接地址：</p><input type="text" name="url" class="text"><span title="如果填写则跳转到外部地址（选填）">*</span></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+          <div class="xtsz-add-content" id="tjxtxx" style="display: none;">
+            <h3>添加系统信息</h3>
+            <form class="contents" action="{{host}}/admin/user/xtadd" method="post">
+              <div>
+                <li><p>网站名称：</p><input type="text" name="site_name" class="text"></li>
+                <li><p>网站链接：</p><input type="text" name="site_url" class="text"><span title="如果填写则跳转到外部地址（选填）">*</span></li>
+                <li><p>网站logo：</p><input type="image" name="site_logo" class="img" value="选择图片""><span>未选择任何文件</span></li>
+                <li><p>网站关键词：</p><input type="text" name="keywords" class="text"></li>
+                <li><p>网站备案：</p><input type="text" name="icp" class="text"></li>
+                <li><p>关于我们：</p><input type="text" name="about" class="text"></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+</body>
+</html>

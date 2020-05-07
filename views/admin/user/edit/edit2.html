@@ -1,0 +1,25 @@
+{{include 'admin/common/header.html'}}
+      <div class="content">
+        {{include 'admin/common/left-add.html'}}
+        <section class="section" id="section">
+          <div class="nrgl-add-content" id="tjnr">
+            <h3>修改内容信息</h3>
+            <form class="contents" action="{{host}}/admin/user/nredit" method="post">
+              <div>
+                <li><input type="hidden" name="id" value="{{@list._id}}" class="text"></li>
+                <li><p>标题名称：</p><input type="text" name="title" value="{{list.title}}" class="text"></li>
+                <li><p>链接地址：</p><input type="text" name="url" value="{{list.url}}" class="text"><span title="如果填写则跳转到外部地址（选填）">*</span></li>
+                <li><p>所属分类：</p><input type="text" name="cid" value="{{list.cid}}"></li>
+                <li><p>关键词：</p><input type="text" name="keywords" value="{{list.keywords}}" class="text"></li>
+                <li><p>图片：</p><input type="image" name="img" value="{{list.img}}" class="imgs" value="选择图片""><span>未选择任何文件</span></li>
+                <li><p>作者：</p><input type="text" name="author" value="{{list.author}}" class="text"></li>
+                <li><p>详细内容：</p><textarea name="content" value="{{list.content}}"></textarea></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+</body>
+</html>

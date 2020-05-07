@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+      width: 100%;
+      height: 600px;
+      background: #0278fe;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .imgcontent{
+        width: 450px;
+        height: 445px;
+        position: relative;
+    }
+    .imglogo{
+        width: 100%;
+        height: auto;
+    }
+    .denglcontent{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        bottom: 0px;
+        right: 68px;
+    }
+    .denglutext{
+        width: 250px;
+        height: 28px;
+        margin:0 0 10px 15px;
+        padding-left: 5px;
+    }
+    .denglupd{
+        width: 250px;
+        height: 28px;
+        margin:0 0 9px 15px;
+        padding-left: 5px;
+    }
+    .dengluyzm{
+        width: 195px;
+        height: 28px;
+        margin-left:15px;
+        padding-left: 5px;
+    }
+    .denglubtn{
+      width: 259px;
+      height: 33px;
+      margin-top: 9px;
+      margin-left: 15px;
+      color: #fff;
+      background: #0278fe;
+      border: 0;
+      border-radius:5px;
+      cursor: pointer;
+      outline: none;
+    }
+    .linkdiv{
+      width: 259px;
+      height: 33px;
+      margin-left: 15px;
+      line-height: 33px;
+      font-size: 12px;
+    }
+    .linkdiv div{
+        float: right;
+        display: flex;
+        align-items: center;
+        color: #706d6d;
+    }
+    .wjmm,.zhuce{
+        cursor: pointer; 
+    }
+    .zhuce{
+        margin-left: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+      <div class="imgcontent">
+        <img class="imglogo" src="{{host}}/admin/imgs/denglu.jpg">
+        <form class="denglcontent" action="post">
+            <input type="text" class="denglutext" placeholder="请输入注册账号">
+            <input type="password" class="denglupd" placeholder="请输入邮箱">
+            <input type="password" class="denglupd" placeholder="请输入注册密码">
+            <input type="text" class="dengluyzm" placeholder="请输入图形验证码">
+            <input type="button" class="denglubtn" value="立即注册">
+            <div class="linkdiv">
+              <a class="wjmm" href="javascript:;">无法注册？</a>
+              <a class="zhuce" href="{{host}}/admin/login">登录</a>
+              <div><input type="checkbox"><span>记住注册账号</span></div>
+            </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

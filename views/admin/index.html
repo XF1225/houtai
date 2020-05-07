@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{host}}/admin/css/shouye.css">
+  <script src="{{host}}/admin/js/jquery-3.4.1.min.js"></script>
+  <script src="{{host}}/admin/js/list.js"></script>
+</head>
+<script>
+  $(document).ready(function(){
+    $('.tabcord-h4').click(function(){
+     var siblings=$(this).siblings();
+      if(siblings.hasClass('tablist')){
+        siblings.removeClass('tablist');
+      }else{
+        siblings.addClass('tablist');
+      } 
+    });
+    $('#glylb').click(function(){
+      $('#section div').eq(0).show().siblings().hide();
+    });
+    $('#fllb').click(function(){
+      $('#section').children().eq(1).show().siblings().hide();
+    });
+    $('#wzlb').click(function(){
+      $('#section').children().eq(2).show().siblings().hide();
+    });
+    $('#lbtlb').click(function(){
+      $('#section').children().eq(3).show().siblings().hide();
+    });
+    $('#yqljlb').click(function(){
+      $('#section').children().eq(4).show().siblings().hide();
+    });
+    $('#dhlb').click(function(){
+      $('#section').children().eq(5).show().siblings().hide();
+    });
+    $('#xtxxlb').click(function(){
+      $('#section').children().eq(6).show().siblings().hide();
+    });
+    $('.guanlirenyuan').click(function(){
+      $('.tcdl').toggle();
+    })
+  })
+</script>
+<body>
+    <div class="container">
+      <header>
+        <div class="headertop">
+          <h2 class="headerh2">XX后台管理系统</h2>
+          <div class="guanlirenyuan">
+            <div class="glry1"><img src="{{host}}/admin/imgs/qfdg.jpg"></div>
+            <div class="glry2"><p>欢迎光临,</p><span>{{userInfo}}</span></div>
+            <div class="glry3">❣</div>
+          </div>
+        </div>
+        <div class="tcdl">
+          <li><a href="javascript:;">设置</a></li>
+          <li><a href="javascript:;">个人资料</a></li>
+          <li><a href="{{host}}/admin/loginout">退出登录</a></li>
+        </div>
+        <div class="headerbottom">
+          <div class="hb1">系统分类</div>
+          <div class="hb2">
+              <div class="hb2-logo">🏚</div>
+              <div class="hb2-nav"><a class="active">首页</a>><a>控制台</a></div>
+              <input type="search" class="hb2-search" placeholder="search...">
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <aside class="aside" id="aside">
+          <ul>
+            <li><span>🏚</span><h4 class="tabcord">控制台</h4><i>></i></li>
+            <li>
+              <span>👩</span>
+              <div class="tabcord">
+                <h4 class="tabcord-h4">管理员管理</h4>
+                <div class="tablist">
+                  <div class="tablist-1" id="glylb">
+                    <a href="{{host}}/admin/user">管理员列表</a>
+                  </div>
+                  <div class="tablist-2" id="tjgly">
+                    <a href="{{host}}/admin/user/add">添加管理员</a>
+                  </div>
+                </div>
+              </div>
+              <i>></i>
+            </li>
+            <li>
+              <span>📑</span>
+              <div class="tabcord">
+                <h4 class="tabcord-h4">分类管理</h4>
+                <div class="tablist">
+                  <div class="tablist-1" id="fllb">
+                    <a href="{{host}}/admin/user">分类列表</a>
+                  </div>
+                  <div class="tablist-2" id="tjfl">
+                    <a href="{{host}}/admin/user/add>">添加分类</a>
+                  </div>
+                </div>
+              </div>
+              <i>></i>
+            </li>
+            <li>
+              <span>📃</span>
+              <div class="tabcord">
+                <h4 class="tabcord-h4">内容管理</h4>
+                <div class="tablist">
+                  <div class="tablist-1" id="wzlb">
+                    <a href="{{host}}/admin/user">文章列表</a>
+                  </div>
+                  <div class="tablist-2" id="tjnr">
+                    <a href="{{host}}/admin/user/add">添加文章内容</a>
+                  </div>
+                </div>
+              </div>
+              <i>></i>
+            </li>
+            <li>
+              <span>🗺</span>
+              <div class="tabcord">
+                <h4 class="tabcord-h4">轮播图管理</h4>
+                <div class="tablist">
+                  <div class="tablist-1" id="lbtlb">
+                    <a href="{{host}}/admin/user">轮播图列表</a>
+                  </div>
+                  <div class="tablist-2" id="tjlbt">
+                    <a href="{{host}}/admin/user/add">添加轮播图</a>
+                  </div>
+                </div>
+              </div>
+              <i>></i>
+            </li>
+            <li>
+              <span>👩‍🌾</span>
+              <div class="tabcord">
+                <h4 class="tabcord-h4">友情链接管理</h4>
+                <div class="tablist">
+                  <div class="tablist-1" id="yqljlb">
+                    <a href="{{host}}/admin/user">友情链接列表</a>
+                  </div>
+                  <div class="tablist-2" id="tjyqlj">
+                    <a href="{{host}}/admin/user/add">添加友情链接</a>
+                  </div>
+                </div>
+              </div>
+              <i>></i>
+            </li>
+            <li>
+              <span>🌺</span>
+              <div class="tabcord">
+                <h4 class="tabcord-h4">导航管理</h4>
+                <div class="tablist">
+                  <div class="tablist-1" id="dhlb">
+                    <a href="{{host}}/admin/user">导航列表</a>
+                  </div>
+                  <div class="tablist-2" id="tjdh">
+                    <a href="{{host}}/admin/user/add">添加导航</a>
+                  </div>
+                </div>
+              </div>
+              <i>></i>
+            </li>
+            <li>
+              <span>🌀</span>
+              <div class="tabcord">
+                <h4 class="tabcord-h4">系统设置</h4>
+                <div class="tablist">
+                  <div class="tablist-1" id="xtxxlb">
+                    <a href="{{host}}/admin/user">系统信息列表</a>
+                  </div>
+                  <div class="tablist-2" id="tjxtxx">
+                    <a href="{{host}}/admin/user/add">添加系统信息</a>
+                  </div>
+                </div>
+              </div>
+              <i>></i>
+            </li>
+          </ul>
+        </aside>
+        <section class="section" id="section">
+          <div class="kzt-content">
+           <h3>欢迎进入后台管理！</h3>
+          </div>
+        </section>
+      </div>
+    </div>
+</body>
+</html>

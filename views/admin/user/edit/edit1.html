@@ -1,0 +1,22 @@
+{{include 'admin/common/header.html'}}
+      <div class="content">
+        {{include 'admin/common/left-add.html'}}
+        <section class="section" id="section">
+          <div class="flgl-add-content" id="tjfl">
+            <h3>修改分类信息</h3>
+            <form class="contents" action="{{host}}/admin/user/fledit" method="post">
+              <div>
+                <li><input type="hidden" name="id" value="{{@list._id}}" class="text"></li>
+                <li><p>标题：</p><input type="text" name="title" value="{{list.title}}" class="text"></li>
+                <li><p>描述：</p><input type="text" name="description" value="{{list.description}}" class="text"></li>
+                <li><p>分类：</p><input type="text" name="cid" value="{{list.cid}}" class="text"></li>
+                <li><p>关键词：</p><input type="text" name="keywords" value="{{list.keywords}}" class="text"></li>
+                <li><input class="submit" type="submit" value="提交"></li>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+{{include 'admin/common/header.html'}}
+      <div class="content">
+        {{include 'admin/common/left-list.html'}}
+        <section class="section" id="section">
+          <div class="gly-content" id="glylb">
+            <h3>管理员列表</h3>
+            <table class="table-content">
+              <tr>
+                <th>用户名</th>
+                <th>邮箱</th>
+                <th>密码</th>
+                <th>登录时间</th>
+                <th>增加时间</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+              {{each list1}}
+              <tr>
+                <td>{{$value.username}}</td>
+                <td>{{$value.email}}</td>
+                <td>{{$value.password}}</td>
+                <td>{{$value.login_time}}</td>
+                <td>{{$value.add_time}}</td>
+                <td>{{$value.status}}</td>
+                <td><a href="{{host}}/admin/user/edit0?id={{@$value._id}}">修改</a>  <a href="{{host}}/admin/user/delet?id={{@$value._id}}">删除</a></td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+          <div class="flgl-content" id="fllb" style="display: none;">
+            <h3>文章分类管理列表</h3>
+            <table class="table-content">
+              <tr>
+                <th>标题</th>
+                <th>描述</th>
+                <th>分类</th>
+                <th>关键词</th>
+                <th>增加时间</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+              {{each list2}}
+              <tr>
+                <td>{{$value.title}}</td>
+                <td>{{$value.description}}</td>
+                <td>{{$value.cid}}</td>
+                <td>{{$value.keywords}}</td>
+                <td>{{$value.add_time}}</td>
+                <td>{{$value.status}}</td>
+                <td><a href="{{host}}/admin/user/edit1?id={{@$value._id}}">修改</a>  <a href="{{host}}/admin/user/delet?id={{@$value._id}}">删除</a></td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+          <div class="nrgl-content" id="wzlb" style="display: none;">
+            <h3>内容管理列表</h3>
+            <table class="table-content">
+              <tr>
+                <th>标题</th>
+                <th>分类</th>
+                <th>关键词</th>
+                <th>作者</th>
+                <th>详细内容</th>
+                <th>增加时间</th>
+                <th>访问次数</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+              {{each list3}}
+              <tr>
+                <td>{{$value.title}}</td>
+                <td>{{$value.cid}}</td>
+                <td>{{$value.keywords}}</td>
+                <td>{{$value.author}}</td>
+                <td>{{$value.content}}</td>
+                <td>{{$value.add_time}}</td>
+                <td>{{$value.count}}</td>
+                <td>{{$value.status}}</td>
+                <td><a href="{{host}}/admin/user/edit2?id={{@$value._id}}">修改</a>  <a href="{{host}}/admin/user/delet?id={{@$value._id}}">删除</a></td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+          <div class="lbtgl-content" id="lbtlb" style="display: none;">
+            <h3>轮播图管理列表</h3>
+            <table class="table-content">
+              <tr>
+                <th>标题内容</th>
+                <th>图片地址</th>
+                <th>链接地址</th>
+                <th>增加时间</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+              {{each list4}}
+              <tr>
+                <td>{{$value.title}}</td>
+                <td>{{$value.imgs}}</td>
+                <td>{{$value.url}}</td>
+                <td>{{$value.add_time}}</td>
+                <td>{{$value.status}}</td>
+                <td><a href="{{host}}/admin/user/edit3?id={{@$value._id}}">修改</a>  <a href="{{host}}/admin/user/delet?id={{@$value._id}}">删除</a></td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+          <div class="yqljgl-content" id="yqljlb" style="display: none;">
+            <h3>友情链接管理列表</h3>
+            <table class="table-content">
+              <tr>
+                <th>友情链接标题</th>
+                <th>图片地址</th>
+                <th>链接地址</th>
+                <th>增加时间</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+              {{each list5}}
+              <tr>
+                <td>{{$value.title}}</td>
+                <td>{{$value.imgs}}</td>
+                <td>{{$value.url}}</td>
+                <td>{{$value.add_time}}</td>
+                <td>{{$value.status}}</td>
+                <td><a href="{{host}}/admin/user/edit4?id={{@$value._id}}">修改</a>  <a href="{{host}}/admin/user/delet?id={{@$value._id}}">删除</a></td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+          <div class="dhgl-content" id="dhlb" style="display: none;">
+            <h3>导航管理列表</h3>
+            <table class="table-content">
+              <tr>
+                <th>导航标题</th>
+                <th>链接地址</th>
+                <th>增加时间</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+              {{each list6}}
+              <tr>
+                <td>{{$value.title}}</td>
+                <td>{{$value.url}}</td>
+                <td>{{$value.add_time}}</td>
+                <td>{{$value.status}}</td>
+                <td><a href="{{host}}/admin/user/edit5?id={{@$value._id}}">修改</a>  <a href="{{host}}/admin/user/delet?id={{@$value._id}}">删除</a></td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+          <div class="xtsz-content" id="xtxxlb" style="display: none;">
+            <h3>系统设置列表</h3>
+            <table class="table-content">
+              <tr>
+                <th>网站名称</th>
+                <th>网站链接</th>
+                <th>网站logo</th>
+                <th>网站关键词</th>
+                <th>网站备案</th>
+                <th>关于我们</th>
+                <th>增加时间</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+              {{each list7}}
+              <tr>
+                <td>{{$value.site_name}}</td>
+                <td>{{$value.site_url}}</td>
+                <td>{{$value.site_logo}}</td>
+                <td>{{$value.keywords}}</td>
+                <td>{{$value.icp}}</td>
+                <td>{{$value.about}}</td>
+                <td>{{$value.add_time}}</td>
+                <td>{{$value.status}}</td>
+                <td><a href="{{host}}/admin/user/edit6?id={{@$value._id}}">修改</a>  <a href="{{host}}/admin/user/delet?id={{@$value._id}}">删除</a></td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+        </section>
+      </div>
+</body>
+</html>
